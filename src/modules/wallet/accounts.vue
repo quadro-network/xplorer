@@ -254,7 +254,7 @@ async function loadBalances(chainName: string, endpoint: string, address: string
             <div class=" max-w-md overflow-hidden"><div class="font-bold">{{ key }}</div></div>
             <div class="dropdown">
               <label tabindex="0" class=" cursor-pointer">{{ subaccounts.length }} addresses</label>
-              <ul tabindex="0" class=" -left-14 dropdown-content menu p-2 shadow bg-base-200 rounded-box z-50">
+              <ul tabindex="0" class=" -left-14 dropdown-content menu p-2 shadow bg-gray-950 rounded-box z-50">
                 <li v-for="x in subaccounts">
                 <a>
                   <img :src="x.account.logo" class="w-8 h-8 mr-2" />
@@ -268,7 +268,7 @@ async function loadBalances(chainName: string, endpoint: string, address: string
             </div>
           </div>
         </div>
-        <div class="p-4 bg-base-200 mt-2">Delegations</div>
+        <div class="p-4 bg-gray-950 mt-2">Delegations</div>
         <div>
           <ul class="!menu w-full">
             <div v-for="x in subaccounts">
@@ -287,7 +287,7 @@ async function loadBalances(chainName: string, endpoint: string, address: string
             </div>
           </ul>
         </div>
-        <div class="p-4 bg-base-200">Balances</div>
+        <div class="p-4 bg-gray-950">Balances</div>
         <div>
           <ul class="!menu w-full">
             <div v-for="s in subaccounts">
@@ -344,7 +344,7 @@ async function loadBalances(chainName: string, endpoint: string, address: string
                   <div>
                     <div class="tooltip" :class="acc.compatiable ? 'tooltip-base-content' : 'tooltip-error'
                       " :data-tip="`Coin Type: ${acc.coinType}`">
-                      <div class="font-bold capitalize" :class="acc.compatiable ? 'text-green-500' : 'text-red-500'
+                      <div class="font-bold capitalize" :class="acc.compatiable ? 'text-gray-50' : 'text-red-500'
                         ">
                         {{ acc.chainName }}
                       </div>

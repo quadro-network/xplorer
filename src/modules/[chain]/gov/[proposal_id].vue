@@ -189,7 +189,7 @@ const abstain = computed(() => {
 const processList = computed(() => {
   return [
     { name: 'Turnout', value: turnout.value, class: 'bg-info' },
-    { name: 'Yes', value: yes.value, class: 'bg-base-content' },
+    { name: 'Yes', value: yes.value, class: 'bg-gray-950' },
     { name: 'No', value: no.value, class: 'bg-error' },
     { name: 'No With Veto', value: veto.value, class: 'bg-red-800' },
     { name: 'Abstain', value: abstain.value, class: 'bg-warning' },
@@ -232,7 +232,7 @@ function metaItem(metadata: string|undefined): { title: string; summary: string 
               ? 'text-yes'
               : color === 'error'
               ? 'text-no'
-              : 'text-info'
+              : 'text-accent-content'
           "
         >
           {{ status }}
@@ -341,7 +341,7 @@ function metaItem(metadata: string|undefined): { title: string; summary: string 
           </div>
           <div>
             <div class="flex items-center mb-1">
-              <div class="w-2 h-2 rounded-full bg-base-content mr-3"></div>
+              <div class="w-2 h-2 rounded-full bg-gray-950 mr-3"></div>
               <div class="text-base flex-1 text-main">
                 {{ $t('gov.vote_end') }} {{ format.toDay(proposal.voting_end_time) }}
               </div>

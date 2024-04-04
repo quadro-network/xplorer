@@ -64,7 +64,7 @@ const isConvertable = computed(() => {
     <RouterLink :to="`/${chainStore.chainName}/account/${text}`">{{ text }}</RouterLink>
     <div v-for="{name, provider} in names">
       <span class="text-xs truncate relative py-1 px-2 p2-4 w-fit ml-2 rounded text-base-content tooltip" :data-tip="provider" :title="provider">
-        <span class="inset-x-0 inset-y-0 opacity-10 absolute bg-base-content"></span>
+        <span class="inset-x-0 inset-y-0 opacity-10 absolute bg-gray-950"></span>
         <button>{{ name }}</button>
       </span>
     </div>

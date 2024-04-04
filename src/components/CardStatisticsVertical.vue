@@ -23,8 +23,8 @@ const isPositive = controlledComputed(
 
 <template>
   <div class="#saved shadow rounded p-4">
-    <div class="flex items-center justify-center">
-      <div
+    <div  class="flex items-center justify-center">
+      <div 
         v-if="props.icon"
         class="relative w-9 h-9 rounded overflow-hidden flex items-center justify-center"
       >

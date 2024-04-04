@@ -229,7 +229,7 @@ loadAvatars();
             <span>
                 <div class="relative w-9 h-9 rounded overflow-hidden flex items-center justify-center mr-2">
                     <Icon class="text-base-content" icon="mdi:trending-up" size="32" />
-                    <div class="absolute top-0 left-0 bottom-0 right-0 opacity-20 bg-base-content"></div>
+                    <div class="absolute top-0 left-0 bottom-0 right-0 opacity-20 bg-gray-950"></div>
                 </div>
             </span>
             <span>
@@ -306,7 +306,7 @@ loadAvatars();
         <div class="#saved px-4 pt-3 pb-4 rounded shadow">
             <div class="overflow-x-auto">
                 <table class="table staking-table w-full">
-                    <thead class=" bg-base-200">
+                    <thead class=" bg-gray-950">
                         <tr>
                             <th
                                 scope="col"
@@ -326,7 +326,7 @@ loadAvatars();
                         <tr
                             v-for="({v, rank, logo}, i) in list"
                             :key="v.operator_address"
-                            class="hover:bg-gray-100 dark:hover:bg-[#141414]"
+                            class=" hover:bg-gray-100 dark:hover:bg-[#141414]"
                         >
                             <!-- 👉 rank -->
                             <td>

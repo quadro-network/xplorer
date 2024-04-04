@@ -185,7 +185,7 @@ const result = ref({});
         <div class="#saved px-4 pt-3 pb-4 rounded mb-4 shadow">
             <h2 class="card-title truncate w-full mt-4 mb-2">Transactions</h2>
             <table class="table">
-                <thead class=" bg-base-200">
+                <thead style="color: white" class="backdrop-blur-md">
                     <tr>
                         <td> {{ $t('ibc.height') }}</td>
                         <td>{{ $t('ibc.txhash') }}</td>

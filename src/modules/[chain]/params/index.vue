@@ -1,4 +1,4 @@
-<script lang="ts" setup>
+<!-- <script lang="ts" setup>
 import { useParamStore } from '@/stores';
 import { ref, onMounted } from 'vue';
 import CardParameter from '@/components/CardParameter.vue';
@@ -6,10 +6,10 @@ import ArrayObjectElement from '@/components/dynamic/ArrayObjectElement.vue';
 const store = useParamStore();
 const chain = ref(store.chain);
 onMounted(() => {
-  // fetch the data
+  
   store.initial();
 });
-</script>
+</script> -->
 <template>
   <div class="overflow-hidden">
     <!-- Chain ID -->
@@ -51,7 +51,7 @@ onMounted(() => {
     </div>
   </div>
 </template>
-
+<!-- 
 <route>
 {
   meta: {
@@ -59,4 +59,4 @@ onMounted(() => {
     order: 50
   }
 }
-</route>
+</route> -->

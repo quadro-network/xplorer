@@ -18,7 +18,7 @@ function changeEndpoint(item: Endpoint) {
         <img v-lazy="chainStore.logo" class="w-9 h-9 rounded-full" />
         <div
           class="w-2 h-2 rounded-full absolute right-0 bottom-0 shadow" :class="{
-            'bg-base-content': baseStore.connected,
+            'bg-gray-950': baseStore.connected,
             'bg-error': !baseStore.connected
           }"
         ></div>
@@ -47,7 +47,7 @@ function changeEndpoint(item: Endpoint) {
     </label>
     <div
       tabindex="0"
-      class="dropdown-content -left-6 w-80 menu shadow bg-base-200 rounded-box overflow-auto"
+      class="dropdown-content -left-6 w-80 menu shadow bg-gray-950 rounded-box overflow-auto"
     >
       <!-- rest -->
       <div
@@ -58,7 +58,7 @@ function changeEndpoint(item: Endpoint) {
       </div>
       <div
         v-for="(item, index) in chainStore.current?.endpoints?.rest"
-        class="px-4 py-2 w-full hover:bg-gray-100 backdrop-blur-md 
+        class="px-4 py-2 w-full  hover:bg-gray-100 backdrop-blur-md 
  cursor-pointer"
         :key="index"
         @click="changeEndpoint(item)"

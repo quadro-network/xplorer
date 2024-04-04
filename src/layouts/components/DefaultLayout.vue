@@ -115,7 +115,7 @@ dayjs()
             @click="changeOpen(index)"
           />
           <div
-            class="collapse-title !py-0 px-4 flex items-center cursor-pointer hover:bg-gray-100 "
+            class="collapse-title !py-0 px-4 flex items-center cursor-pointer "
           >
             <Icon
               v-if="item?.icon?.icon"
@@ -149,27 +149,18 @@ dayjs()
               <RouterLink
                 v-if="isNavLink(el)"
                 @click="sidebarShow = false"
-                class="hover:bg-amber-500  rounded cursor-pointer px-3 py-2 flex items-center"
+                class="hover:bg-gray-950  rounded cursor-pointer px-3 py-2 flex items-center"
                 :class="{
                   '': selected($route, el),
                 }"
                 :to="el.to"
               >
-                <Icon
-                  v-if="!el?.icon?.image"
-                  icon="mdi:chevron-right"
-                  class="mr-2 ml-3"
-                  :class="{
-                    'text-black':
-                      $route.path === el?.to?.path &&
-                      item?.title !== 'Favorite',
-                  }"
-                />
+              
                 <img
                   v-if="el?.icon?.image"
                   :src="el?.icon?.image"
                   class="w-6 h-6 rounded-full mr-3 ml-4 " :class="{
-                  'border border-gray-300 bg-white': selected($route, el),
+                  'border border-gray-900 bg-white': selected($route, el),
                 }"
                 />
                 <div
@@ -189,7 +180,7 @@ dayjs()
           v-if="isNavLink(item)"
           :to="item?.to"
           @click="sidebarShow = false"
-          class="cursor-pointer rounded-lg px-4 flex items-center py-2 hover:bg-gray-100 dark:hover:bg-[#141414]"
+          class="cursor-pointer rounded-lg px-4 flex items-center py-2  hover:bg-gray-100 dark:hover:bg-[#141414]"
         >
           <Icon
             v-if="item?.icon?.icon"
@@ -225,104 +216,36 @@ dayjs()
           {{ item?.heading }}
         </div>
       </div>
-      <div class="px-2">
-          <div class="px-4 text-sm pt-2 text-gray-400 pb-2 uppercase">
-            Tools
-          </div>
-          <RouterLink to="/wallet/suggest"
-          class="py-2 px-4 flex items-center cursor-pointer rounded-lg hover:bg-gray-100 dark:hover:bg-[#141414]"
-          >
-            <Icon icon="mdi:frequently-asked-questions" class="text-xl mr-2" />
-            <div
-              class="text-base capitalize flex-1 text-gray-600 dark:text-gray-200"
-            >
-              Wallet Helper
-            </div>
-          </RouterLink>
-          <div class="px-4 text-sm pt-2 text-gray-400 pb-2 uppercase">
-          {{ $t('module.sponsors') }}
-        </div>
-        <a
-          href="https://osmosis.zone"
-          target="_blank"
-          class="py-2 px-4 flex items-center cursor-pointer rounded-lg hover:bg-gray-100 dark:hover:bg-[#141414]"
-        >
-          <img
-            src="https:// Stake-Take/logos/osmosis.jpg"
-            class="w-6 h-6 rounded-full mr-3"
-          />
-          <div
-            class="text-sm capitalize flex-1 text-gray-600 dark:text-gray-200"
-          >
-            Osmosis
-          </div>
-        </a>
-        <a
-          href="https://celestia.org"
-          target="_blank"
-          class="py-2 px-4 flex items-center cursor-pointer rounded-lg hover:bg-gray-100 dark:hover:bg-[#141414]"
-        >
-          <img
-            src="https:// Stake-Take/logos/celestia.png"
-            class="w-6 h-6 rounded-full mr-3"
-          />
-          <div
-            class="text-sm capitalize flex-1 text-gray-600 dark:text-gray-200"
-          >
-            Celestia
-          </div>
-        </a>
-        <a
-          href="https://becole.com"
-          target="_blank"
-          class="py-2 px-4 flex items-center cursor-pointer rounded-lg hover:bg-gray-100 dark:hover:bg-[#141414]"
-        >
-          <img
-            src="https://becole.com/static/logo/logo_becole.png"
-            class="w-6 h-6 rounded-full mr-3"
-          />
-          <div
-            class="text-sm capitalize flex-1 text-gray-600 dark:text-gray-200"
-          >
-            Becole
-          </div>
-        </a>
+      <div 
+ class="px-2">
+       
+      
+      
         <div class="px-4 text-sm pt-2 text-gray-400 pb-2 uppercase">{{ $t('module.links') }}</div>
         <a
-          href="https://twitter.com/ping_pub"
+          href="https://twitter.com/StakeAndTake"
           target="_blank"
-          class="py-2 px-4 flex items-center cursor-pointer rounded-lg hover:bg-gray-100 dark:hover:bg-[#141414]"
+          class="py-2 px-4 flex items-center cursor-pointer rounded-lg  hover:bg-gray-100 dark:hover:bg-[#141414]"
         >
-          <Icon icon="mdi:twitter" class="text-xl mr-2" />
+        <img style="width: 20px; height: 20px;" src="https://stake-take.com/qr/twitter.svg" alt="" />
           <div
             class="text-base capitalize flex-1 text-gray-600 dark:text-gray-200"
           >
             Twitter
           </div>
         </a>
+        
+       
         <a
-          v-if="showDiscord"
-          href="https://discord.com/invite/CmjYVSr6GW"
+          href="https://github.com/StakeTake"
           target="_blank"
-          class="py-2 px-4 flex items-center rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-[#141414]"
+          class="py-2 px-4 flex items-center rounded-lg cursor-pointer  hover:bg-gray-100 dark:hover:bg-[#141414]"
         >
-          <Icon icon="mdi:discord" class="text-xl mr-2" />
+        <img style="width: 20px; height: 20px;" src="https://stake-take.com/qr/git.svg" alt="" />
           <div
             class="text-base capitalize flex-1 text-gray-600 dark:text-gray-200"
           >
-            Discord
-          </div>
-        </a>
-        <a
-          href="https://github.com/ping-pub/explorer/discussions"
-          target="_blank"
-          class="py-2 px-4 flex items-center rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-[#141414]"
-        >
-          <Icon icon="mdi:frequently-asked-questions" class="text-xl mr-2" />
-          <div
-            class="text-base capitalize flex-1 text-gray-600 dark:text-gray-200"
-          >
-            FAQ
+            GitHub
           </div>
         </a>
       </div>

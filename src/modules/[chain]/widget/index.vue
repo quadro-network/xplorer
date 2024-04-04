@@ -1,4 +1,4 @@
-<script lang="ts" setup>
+<!-- <script lang="ts" setup>
 import { useBaseStore, useBlockchain, useFormatter } from '@/stores';
 import type { Connection } from '@/types';
 import { computed } from 'vue';
@@ -15,9 +15,10 @@ const chainName = computed(() => chainStore?.current?.prettyName || "")
 const hdPath = computed(() => {
     return `m/44'/${ chainStore.current?.coinType }/0'/0/0`
 })
-</script>
+</script> -->
 <template>
-  <div>
+  <div style="display: none"
+>
     <div class="#saved px-4 pt-3 pb-4 rounded shadow">
       <h2 class="card-title">{{ $t('widget.title') }}</h2>
       <div class="my-4 grid grid-flow-col auto-cols-max  overflow-auto">
@@ -32,7 +33,7 @@ const hdPath = computed(() => {
         </div>
       </div>
       <span class="text-base">{{ $t('widget.text_1') }}</span>
-        <div class="mockup-code bg-base-200 my-2">
+        <div class="mockup-code bg-gray-950 my-2">
             <pre data-prefix="1"><code class="text-gray-800 dark:invert">&lt;script type="module" src="https://unpkg.com/ping-widget@latest/dist/ping-widget.js"&gt;</code></pre>
         </div>
     </div>
@@ -40,13 +41,13 @@ const hdPath = computed(() => {
       <h2 class="card-title">{{ $t('module.widget') }}</h2>
       <div class="mt-4">
         <span class="text-base"> 1. {{ $t('widget.text_2') }}</span>
-        <div class="mockup-code bg-base-200 my-2">
+        <div class="mockup-code bg-gray-950 my-2">
             <pre data-prefix=">"><code class="text-green-400">&lt;!-- This widget is optional. --&gt; </code></pre>
             <pre data-prefix=">"><code  class="text-gray-800 dark:invert">&lt;ping-connect-wallet chain-id="{{ chainId }}" hd-path="{{ hdPath }}"/&gt;</code></pre>
         </div>
 
         <span class="text-base"> 2. {{ $t('widget.text_3') }}</span>
-        <div class="mockup-code bg-base-200 my-2">
+        <div class="mockup-code bg-gray-950 my-2">
             <pre data-prefix=">"><code class=" text-gray-800 dark:invert">&lt;ping-token-convert chain-name="{{ chainName }}" endpoint="{{endpoint}}" hd-path="{{hdPath}}"/&gt;</code></pre>
             <pre data-prefix=">"><code class="text-gray-800 dark:invert">&lt;label for="PingTokenConvert" class="btn btn-sm"&gt;Buy {{chainName.toUpperCase()}}&lt;/label&gt;</code></pre>
         </div>
@@ -54,7 +55,7 @@ const hdPath = computed(() => {
     </div>
   </div>
 </template>
-
+<!-- 
 <route>
     {
       meta: {
@@ -62,4 +63,4 @@ const hdPath = computed(() => {
         order: 300
       }
     }
-</route>
+</route> -->

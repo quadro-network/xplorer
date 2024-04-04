@@ -52,7 +52,7 @@ const chainStore = useBlockchain()
  </g>
 </svg>
       </div>
-      <h1 class=" #saved dark:invert text-3xl md:!text-6xl font-bold">
+      <h1 style="color: #a98e3c;" class=" #saved :invert text-3xl md:!text-6xl font-bold">
         {{ $t('pages.title') }}
       </h1>
     </div>

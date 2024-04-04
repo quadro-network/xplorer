@@ -202,7 +202,7 @@ function mapAmount(events:{type: string, attributes: {key: string, value: string
               <div
                 class="w-9 h-9 rounded overflow-hidden flex items-center justify-center relative mr-4"
               >
-                <Icon icon="mdi-account-cash" class="text-info" size="20" />
+                <Icon icon="mdi-account-cash" class="text-accent-content" size="20" />
                 <div
                   class="absolute top-0 bottom-0 left-0 right-0 bg-info opacity-20"
                 ></div>
@@ -275,7 +275,7 @@ function mapAmount(events:{type: string, attributes: {key: string, value: string
                   size="20"
                 />
                 <div
-                  class="absolute top-0 bottom-0 left-0 right-0 bg-base-content opacity-20"
+                  class="absolute top-0 bottom-0 left-0 right-0 bg-gray-950 opacity-20"
                 ></div>
               </div>
               <div class="flex-1">

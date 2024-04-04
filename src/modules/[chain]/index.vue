@@ -144,7 +144,7 @@ const amount = computed({
 
           <div class="my-4 flex flex-wrap items-center">
             <a v-for="(item, index) of comLinks" :key="index" :href="item.href"
-              class="link link_style  px-2 py-1 rounded-sm no-underline hover: #saved hover:bg-gray-100 dark:hover:bg-gray-950 flex items-center">
+              class="link link_style  px-2 py-1 rounded-sm no-underline hover: #saved  hover:bg-gray-100 dark:hover:bg-gray-950 flex items-center">
               <Icon :icon="item?.icon" />
               <span class="ml-1 text-sm uppercase">{{ item?.name }}</span>
             </a>
@@ -159,7 +159,7 @@ const amount = computed({
                     <div  class="font-semibold text-xl text-[#6e6e6d] dark:text-white">
                       {{ ticker?.market?.name || '' }}
                     </div>
-                    <div class="text-info text-sm">
+                    <div class="text-accent-content text-sm">
                       {{ shortName(ticker?.base, ticker?.coin_id) }}/{{
                         shortName(ticker?.target, ticker?.target_coin_id)
                       }}

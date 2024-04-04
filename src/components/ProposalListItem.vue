@@ -89,7 +89,7 @@ function metaItem(metadata: string|undefined): { title: string; summary: string 
                     ? 'text-yes'
                     : statusMap?.[item?.status] === 'REJECTED'
                     ? 'text-no'
-                    : 'text-info'
+                    : 'text-accent-content'
                 "
               >
                 <div
@@ -193,7 +193,7 @@ function metaItem(metadata: string|undefined): { title: string; summary: string 
                   ? 'text-yes'
                   : statusMap?.[item?.status] === 'REJECTED'
                   ? 'text-no'
-                  : 'text-info'
+                  : 'text-accent-content'
               "
             >
               <div

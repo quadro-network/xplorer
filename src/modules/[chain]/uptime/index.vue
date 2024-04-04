@@ -231,7 +231,7 @@ function fetchAllKeyRotation() {
 
       <div :class="tab === '3' ? '' : 'hidden'" class="overflow-x-auto">
         <table class="table table-compact w-full mt-5">
-          <thead class="capitalize bg-base-200">
+          <thead class="capitalize bg-gray-950">
             <tr>
               <td>{{ $t('account.validator') }}</td>
               <td class="text-right">{{ $t('module.uptime') }}</td>
@@ -248,7 +248,7 @@ function fetchAllKeyRotation() {
               </div>
             </td>
             <td class="text-right">
-              <span :class="v.uptime && v.uptime > 0.95 ? 'text-green-500' : 'text-red-500'
+              <span :class="v.uptime && v.uptime > 0.95 ? 'text-gray-50' : 'text-red-500'
         ">
                 <div class="tooltip" :data-tip="`${v.missed_blocks_counter} missing blocks`">
                   {{ format.percent(v.uptime) }}

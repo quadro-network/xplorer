@@ -28,7 +28,7 @@ const addFavor = (e: Event) => {
   <RouterLink
     :to="`/${name}`"
     class="backdrop-blur-md 
- hover:bg-gray-100 dark:hover:bg-[#141414] rounded shadow flex items-center px-3 py-3 cursor-pointer"
+  hover:bg-gray-100 dark:hover:bg-[#141414] rounded shadow flex items-center px-3 py-3 cursor-pointer"
   >
     <div class="w-8 h-8 rounded-full overflow-hidden">
       <img :src="conf.logo" />
@@ -37,6 +37,7 @@ const addFavor = (e: Event) => {
       {{ conf?.prettyName || props.name }}
     </div>
     <div
+    style="display: none"
       @click="addFavor"
       class="pl-4 text-xl"
       :class="{

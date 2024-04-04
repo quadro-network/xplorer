@@ -258,9 +258,9 @@ const currencySign = computed(() => {
         </div>
       </div>
       <div class="overflow-x-auto mt-4">
-      <AdBanner class="bg-base-200" id="portfolio-banner-ad" unit="banner" width="970px" height="90px" />
+      <AdBanner class="bg-gray-950" id="portfolio-banner-ad" unit="banner" width="970px" height="90px" />
         <table class="table w-full">
-          <thead class="bg-base-200">
+          <thead class="bg-gray-950">
             <tr>
               <th>Token</th>
               <th class="text-right">Value</th>
@@ -291,7 +291,7 @@ const currencySign = computed(() => {
         No Data
       </div>
     </div>
-    <div class="text-center my-5 bg-base-200">
+    <div class="text-center my-5 bg-gray-950">
       <RouterLink to="./accounts" class="btn btn-link">Add More Asset</RouterLink>
     </div>
   </div>
